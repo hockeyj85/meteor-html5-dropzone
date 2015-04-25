@@ -1,6 +1,6 @@
 Package.describe({
   name: 'hockeyj85:html5-dropzone',
-  version: '0.0.1',
+  version: '0.0.2',
   // Brief, one-line summary of the package.
   summary: 'A lightweight self-styling html5 dropzone.',
   // URL to the Git repository containing the source code for this package.

@@ -7,50 +7,47 @@ html5-dropzone
 meteor add hockeyj85:html5-dropzone
 ```
 
-html5-dropzone is used as a block helper and will render to the dom as a ```<div>```,
-it will react to to drag over events by styling itself.
-It solves the issue of events fired by child elements inside of a drop zone
-messing with parent element styles.
-All drag and drop events will still be bubbled up so you can still use them.
-The context inside the block will be the same as the parent context.
+html5-dropzone is used as a block helper and will render to the dom as a ```<div>```, it reacts to to drag over events by styling itself.
+
+It solves the issue of events fired by child elements inside of a drop zone messing with parent element styles.
+All drag and drop events are still bubbled up so you can still use them.
+
+The context inside the block is the same as the parent context.
 
 Why?
 ---
 
-[CollectionFS](https://github.com/CollectionFS/Meteor-CollectionFS)
-make it easy to [implement a working dropzone](https://github.com/CollectionFS/Meteor-CollectionFS/wiki/Insert-One-Or-More-Files-Dropped-on-an-Element),
-I couldn't find a lightweight way to style it. So this package happened.
+[CollectionFS](https://github.com/CollectionFS/Meteor-CollectionFS) makes it easy to [implement a working dropzone](https://github.com/CollectionFS/Meteor-CollectionFS/wiki/Insert-One-Or-More-Files-Dropped-on-an-Element), I couldn't find a lightweight way to style it. So this package happened.
 
 Usage
 -----
 
-By default there are no styles or classes applied, you have to tell the the
-dropzone how to style itself.
+By default there are no styles or classes applied, you have to tell the the dropzone how to style itself.
 
-###Basic usage
+**Basic usage**
 
 ```spacebars
 <style>
-    .normal {
-        border-style: solid;
-        border-width: 2px;
-        border-radius: 5px;
-    }
+.normal {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+}
 
-    .hoverClass {
-        background-color: lightblue;
-        border-style: dashed;
-        border-color: cornflowerblue;
-    }
+.hoverClass {
+  background-color: lightblue;
+  border-style: dashed;
+  border-color: cornflowerblue;
+}
 
-    .unhoverClass {
-        border-color: lightgray;
-    }
+.unhoverClass {
+  border-color: lightgray;
+}
 </style>
 
 {{#html5Dropzone class="normal" hoverClass="hoverClass" unhoverClass="unhoverClass"}}
-    <h1>Drop it like it's hot.</h1>
-    {{! and other useful things }}
+  <h1>Drop it like it's hot.</h1>
+  {{! and other useful things }}
 {{/html5Dropzone}}
 ```
 
@@ -62,45 +59,45 @@ just render as a plain ```<div>```. Not very useful.
 
 ```spacebars
 {{#html5Dropzone
-    id="aCoolId"
-    class="normal"
-    hoverClass="hoverClass"
-    unhoverClass="unhoverClass"
-    style=""
-    hoverStyle="background-color: "
-    unhoverStyle=""
+  id="someId"
+  class="normal"
+  hoverClass="hoverClass"
+  unhoverClass="unhoverClass"
+  style="background-color: pink;"
+  hoverStyle="background-color: green;"
+  unhoverStyle="background-color: yellow;"
 }}
-    <h1>Drop it like it's hot.</h1>
-    {{! and other useful things }}
+  <h1>Drop it like it's hot.</h1>
+  {{! and other useful things }}
 {{/html5Dropzone}}
 ```
 
-###id
+**id**
 
 The id of the dom element generated, so you can use css selectors on it.
 
-###class
+**class**
 
 This class is applied to the dropzone all of the time.
 
-###hoverClass
+**hoverClass**
 
 This class is added when something is dragged over the drop zone.
 
-###unhoverClass
+**unhoverClass**
 
 This class is added when something is not being dragged over the drop zone.
 
-###style
+**style**
 
 You can pass in some css as a string that will be attached directly to the dropzone.
 It must be well-formed and end with a ';' or this will silently fail.
 
-###hoverStyle
+**hoverStyle**
 
 This css is attached to the dropzone when something is dragged over it.
 
-###unhoverStyle
+**unhoverStyle**
 
 This css is attached to the dropzone when something is not being dragged over it.
 
