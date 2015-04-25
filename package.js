@@ -16,9 +16,3 @@ Package.onUse(function(api) {
 	api.addFiles('client/html5-dropzone.html', 'client');
 	api.addFiles('client/html5-dropzone.js',   'client');
 });
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('hockeyj85:html5-dropzone');
-  api.addFiles('html5-dropzone-tests.js');
-});
