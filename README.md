@@ -7,7 +7,7 @@ html5-dropzone
 meteor add hockeyj85:html5-dropzone
 ```
 
-html5-dropzone is used as a block helper and will render to the dom as a <div>,
+html5-dropzone is used as a block helper and will render to the dom as a ```<div>```,
 it will react to to drag over events by styling itself.
 It solves the issue of events fired by child elements inside of a drop zone
 messing with parent element styles.
@@ -58,7 +58,7 @@ Attributes
 ----------
 
 All of the attributes are optional, if nothing is passed in the dropzone will
-just render as plain <div>. Not very useful.
+just render as plain ```<div>```. Not very useful.
 
 ```spacebars
 {{#html5Dropzone
