@@ -1,0 +1,12 @@
+<template name="html5Dropzone">
+{{! We render the same page whether the parent context is falsey or not }}
+    {{#with ..}}
+	<div id="{{id}}" style="{{style}}" class="{{class}}">
+            {{> UI.contentBlock}}
+    </div>
+    {{else}}
+	<div id="{{id}}" style="{{style}}" class="{{class}}">
+        {{> UI.contentBlock}}
+	</div>
+    {{/with}}
+</template>
