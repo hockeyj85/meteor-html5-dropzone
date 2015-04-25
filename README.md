@@ -58,7 +58,7 @@ Attributes
 ----------
 
 All of the attributes are optional, if nothing is passed in the dropzone will
-just render as plain ```<div>```. Not very useful.
+just render as a plain ```<div>```. Not very useful.
 
 ```spacebars
 {{#html5Dropzone
