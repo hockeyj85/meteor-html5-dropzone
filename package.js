@@ -1,6 +1,6 @@
 Package.describe({
   name: 'hockeyj85:html5-dropzone',
-  version: '0.0.2',
+  version: '0.0.3',
   // Brief, one-line summary of the package.
   summary: 'A lightweight self-styling html5 dropzone.',
   // URL to the Git repository containing the source code for this package.
@@ -11,8 +11,8 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-	api.versionsFrom('1.1.0.2');
-	api.use(['templating'], 'client');
+	api.versionsFrom('1.0.4');
+	api.use(['templating', 'reactive-var'], 'client');
 	api.addFiles('client/html5-dropzone.html', 'client');
 	api.addFiles('client/html5-dropzone.js',   'client');
 });
